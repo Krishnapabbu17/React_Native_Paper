@@ -1,15 +1,43 @@
+import s from '@/styles/defaultStyles';
 import * as React from 'react';
-import { BottomNavigation, Text } from 'react-native-paper';
+import { View } from 'react-native';
+import { BottomNavigation, Text, useTheme } from 'react-native-paper';
 
-const MusicRoute = () => <Text>Music</Text>;
+const Animals = () => (
+  <View style={s.screen}>
+    <View style={s.content}>
+      <Text style={s.header}>Animals</Text>
+      <View style={s.card}><Text style={s.paragraph}>Your tracks</Text></View>
+    </View>
+  </View>
+);
 
-const AlbumsRoute = () => <Text>Albums</Text>;
+const Cars = () => (
+  <View style={s.screen}>
+    <View style={s.content}>
+      <Text style={s.header}>Cars</Text>
+    </View>
+  </View>
+);
 
-const RecentsRoute = () => <Text>Recents</Text>;
+const Food = () => (
+  <View style={s.screen}>
+    <View style={s.content}>
+      <Text style={s.header}>Food</Text>
+    </View>
+  </View>
+);
 
-const NotificationsRoute = () => <Text>Notifications</Text>;
+const Sports = () => (
+  <View style={s.screen}>
+    <View style={s.content}>
+      <Text style={s.header}>Sports</Text>
+    </View>
+  </View>
+);
 
 const MyComponent = () => {
+  const theme = useTheme();
   const [index, setIndex] = React.useState(0);
   const [routes] = React.useState([
     { key: 'music', title: 'Favorites', focusedIcon: 'heart', unfocusedIcon: 'heart-outline'},
@@ -19,10 +47,10 @@ const MyComponent = () => {
   ]);
 
   const renderScene = BottomNavigation.SceneMap({
-    music: MusicRoute,
-    albums: AlbumsRoute,
-    recents: RecentsRoute,
-    notifications: NotificationsRoute,
+    music: Animals,
+    albums: Cars,
+    recents: Food,
+    notifications: Sports,
   });
 
   return (
@@ -30,6 +58,16 @@ const MyComponent = () => {
       navigationState={{ index, routes }}
       onIndexChange={setIndex}
       renderScene={renderScene}
+      // make pages look good
+   //   sceneContainerStyle={{ backgroundColor: '#FAFAFA' }}
+      // make bar look clean
+      barStyle={{
+        height: 64,
+        backgroundColor: theme.colors.elevation.level2,
+        borderTopWidth: 0.5,
+        borderTopColor: theme.colors.outlineVariant,
+        elevation: 2,
+      }}
     />
   );
 };

@@ -1,10 +1,11 @@
-import MyComponent from "@/components/myComponent";
+import NewComponent from "@/components/newComponent";
 import defaultStyles from "@/styles/defaultStyles";
 import { View } from "react-native";
 export default function Index() {
+ 
   return (
     <View style = {defaultStyles.screen}>
-      <MyComponent />
+      <NewComponent/>
     </View>
   );
 }
