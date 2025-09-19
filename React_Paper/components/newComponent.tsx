@@ -89,17 +89,17 @@ const NewComponent = () => {
   const theme = useTheme();
   const [index, setIndex] = React.useState(0);
   const [routes] = React.useState([
-    { key: 'music', title: 'Animals',        focusedIcon: 'paw' },
-    { key: 'albums', title: 'Cars',          focusedIcon: 'car' },
-    { key: 'recents', title: 'Food',         focusedIcon: 'food' },
-    { key: 'notifications', title: 'Sports', focusedIcon: 'basketball' },
+    { key: 'animals', title: 'Animals',        focusedIcon: 'paw' },
+    { key: 'cars', title: 'Cars',          focusedIcon: 'car' },
+    { key: 'food', title: 'Food',         focusedIcon: 'food' },
+    { key: 'sports', title: 'Sports', focusedIcon: 'basketball' },
   ]);
 
   const renderScene = BottomNavigation.SceneMap({
-    music: Animals,
-    albums: Cars,
-    recents: Food,
-    notifications: Sports,
+    animals: Animals,
+    cars: Cars,
+    food: Food,
+    sports: Sports,
   });
 
   return (
