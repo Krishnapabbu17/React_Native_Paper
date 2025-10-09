@@ -4,6 +4,7 @@ import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-nati
 import { SportCard } from '../components/SportCard';
 import { baseballData, basketballData, footballData, soccerData } from '../data/sportsData';
 import { COLORS } from '../styles/colors';
+import styles from '../styles/defaultStyles';
 
 export const MainScreen = ({ userName }: { userName: string }) => {
   const [activeTab, setActiveTab] = useState('Basketball');
@@ -40,28 +41,3 @@ export const MainScreen = ({ userName }: { userName: string }) => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: COLORS.background },
-  header: {
-    padding: 20,
-    backgroundColor: COLORS.white,
-    borderBottomWidth: 1,
-    borderBottomColor: '#eee',
-  },
-  headerTitle: { fontSize: 28, fontWeight: 'bold', color: COLORS.primary },
-  headerSubtitle: { fontSize: 16, color: COLORS.textLight, marginTop: 4 },
-  listContainer: { padding: 16 },
-  navBar: {
-    flexDirection: 'row',
-    height: 60,
-    backgroundColor: COLORS.white,
-    borderTopWidth: 1,
-    borderTopColor: '#eee',
-    justifyContent: 'space-around',
-    alignItems: 'center',
-  },
-  navButton: { flex: 1, justifyContent: 'center', alignItems: 'center', height: '100%' },
-  navText: { fontSize: 14, color: COLORS.textLight },
-  navTextActive: { color: COLORS.secondary, fontWeight: 'bold' },
-});
