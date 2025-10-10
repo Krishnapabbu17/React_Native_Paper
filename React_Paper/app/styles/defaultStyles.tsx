@@ -1,75 +1,16 @@
-import { StyleSheet } from 'react-native';
-import { COLORS } from './colors';
-const styles = StyleSheet.create({
-  loginContainer: {
+import { StyleSheet } from "react-native";
+import { COLORS } from "./colors";
+
+export const defaultStyles = StyleSheet.create({
+  container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 20,
     backgroundColor: COLORS.background,
+    padding: 20,
   },
-  title: {
-    fontSize: 32,
-    fontWeight: 'bold',
+  header: {
+    fontSize: 22,
+    fontWeight: "bold",
     color: COLORS.primary,
     marginBottom: 10,
   },
-  subtitle: {
-    fontSize: 18,
-    color: COLORS.textLight,
-    marginBottom: 40,
-    textAlign: 'center',
-  },
-  input: {
-    width: '100%',
-    height: 50,
-    backgroundColor: COLORS.white,
-    borderRadius: 10,
-    paddingHorizontal: 15,
-    fontSize: 16,
-    borderWidth: 1,
-    borderColor: '#ddd',
-    marginBottom: 20,
-  },
-  button: {
-    width: '100%',
-    height: 50,
-    backgroundColor: COLORS.secondary,
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 10,
-  },
-  buttonText: {
-    color: COLORS.white,
-    fontSize: 18,
-    fontWeight: 'bold',
-  },
-  errorText: {
-    color: COLORS.error,
-    marginBottom: 10,
-    alignSelf: 'flex-start',
-  },
-  container: { flex: 1, backgroundColor: COLORS.background },
-  header: {
-    padding: 20,
-    backgroundColor: COLORS.white,
-    borderBottomWidth: 1,
-    borderBottomColor: '#eee',
-  },
-  headerTitle: { fontSize: 28, fontWeight: 'bold', color: COLORS.primary },
-  headerSubtitle: { fontSize: 16, color: COLORS.textLight, marginTop: 4 },
-  listContainer: { padding: 16 },
-  navBar: {
-    flexDirection: 'row',
-    height: 60,
-    backgroundColor: COLORS.white,
-    borderTopWidth: 1,
-    borderTopColor: '#eee',
-    justifyContent: 'space-around',
-    alignItems: 'center',
-  },
-  navButton: { flex: 1, justifyContent: 'center', alignItems: 'center', height: '100%' },
-  navText: { fontSize: 14, color: COLORS.textLight },
-  navTextActive: { color: COLORS.secondary, fontWeight: 'bold' },
 });
-export default styles;

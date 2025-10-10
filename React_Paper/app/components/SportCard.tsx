@@ -1,8 +1,9 @@
-// app/components/SportCard.tsx
+
 import React from 'react';
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { View, Text, Image, StyleSheet } from 'react-native';
 import { COLORS } from '../styles/colors';
 
+// Sport Card for each player whcih demonstrates how the output is delivered.
 export const SportCard = ({ item }: { item: { imageUrl: string, title: string, description: string } }) => (
   <View style={styles.card}>
     <Image source={{ uri: item.imageUrl }} style={styles.cardImage} />
@@ -27,7 +28,7 @@ const styles = StyleSheet.create({
   },
   cardImage: {
     width: '100%',
-    height: 200,
+    height: 700,
   },
   cardContent: {
     padding: 15,
